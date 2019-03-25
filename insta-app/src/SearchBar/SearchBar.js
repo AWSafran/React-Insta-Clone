@@ -1,8 +1,15 @@
 import React from 'react';
+import '../SearchBar/SearchBar.css'
 
 const SearchBar = props =>{
     return(
-        <div>Search Bar Here!</div>
+        <header>
+            <div className="logo">Logos Here</div>
+            <form>
+                <input />
+            </form>
+            <nav> compass heart profile</nav>
+        </header>
     )
 }
 

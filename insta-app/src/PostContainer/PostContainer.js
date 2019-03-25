@@ -3,7 +3,7 @@ import Post from './Post';
 import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props =>{
-    //console.log(props);
+    console.log(props);
     return(
         <div className="posts">
             {props.posts.map(x => (
@@ -14,7 +14,11 @@ const PostContainer = props =>{
                         user={x.username}
                         postImage={x.imageUrl}    
                     />
-                    <CommentSection />
+                    <CommentSection
+                        key={x.id+1}
+                        likes={x.likes}
+                        comments={x.comments}
+                    />
                 </div>
             ))}
         </div>
