@@ -1,6 +1,16 @@
 header{
     display: flex;
+    width: 95%;
+    text-align: center;
     justify-content: space-between;
     height: 40px;
-    margin: 10px, auto;
+    margin: 10px auto;
+}
+
+nav{
+    width: 20%;
+}
+
+nav i{
+    width: 30%;
 }

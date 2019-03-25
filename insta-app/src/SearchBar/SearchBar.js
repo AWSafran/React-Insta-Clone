@@ -4,11 +4,11 @@ import '../SearchBar/SearchBar.css'
 const SearchBar = props =>{
     return(
         <header>
-            <div className="logo">Logos Here</div>
+            <div className="logo"><i className="fab fa-instagram"></i> Instagram</div>
             <form>
                 <input />
             </form>
-            <nav> compass heart profile</nav>
+            <nav> <i className="far fa-compass"></i><i className="far fa-heart"></i><i className="far fa-user"></i></nav>
         </header>
     )
 }

@@ -1,0 +1,10 @@
+.postHeader{
+    display: flex;
+    height: 40px;
+}
+
+.postHeader img{
+    border-radius: 50%;
+    height: 30px;
+    width: auto;
+}
