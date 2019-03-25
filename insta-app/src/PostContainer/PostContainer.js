@@ -18,6 +18,7 @@ const PostContainer = props =>{
                         key={x.id+1}
                         likes={x.likes}
                         comments={x.comments}
+                        date={x.timestamp}
                     />
                 </div>
             ))}

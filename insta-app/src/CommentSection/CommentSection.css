@@ -1,0 +1,37 @@
+.commentSection{
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    border-top: none;
+    padding: 10px;
+    width:77.5%;
+    margin: 0 auto 20px;
+    text-align: left;
+    line-height: 24px;
+    font-size: 2.4rem;
+}
+
+strong{
+    font-size: 1.8rem;
+}
+
+.symbols{
+    text-align: left;
+    font-size: 3rem;
+}
+
+.numOfLikes{
+    text-align: left;
+}
+
+i{
+    width: 5%
+}
+
+.commentSection input{
+    width: 95%;
+}
+
+.commentSection .date{
+    color: silver;
+    font-size: 1.2rem;
+}
