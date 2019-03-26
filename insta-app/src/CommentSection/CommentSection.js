@@ -9,7 +9,8 @@ class CommentSection extends Component{
 
         this.state={
             comments: props.comments,
-            newComment: ''
+            newComment: '',
+            likes: props.likes
         }
     }
 
@@ -33,11 +34,19 @@ class CommentSection extends Component{
         })
     }
 
+    like = () =>{
+        const newLikes = this.state.likes + 1;
+        this.setState({likes: newLikes})
+    }
+
     render(){
         return (
             <div className="commentSection">
-                <div className="symbols"><i className="far fa-heart"></i> <i className="far fa-comment"></i></div>
-                <div className="numOfLikes">{this.props.likes} likes</div>
+                <div className="symbols"><i 
+                    className="far fa-heart"
+                    onClick={this.like}
+                ></i> <i className="far fa-comment"></i></div>
+                <div className="numOfLikes">{this.state.likes} likes</div>
                 {this.state.comments.map(x => (
                     <div className="commentContent"><strong>{x.username}</strong> {x.text}</div>
                 ))}
