@@ -10,7 +10,8 @@ class CommentSection extends Component{
         this.state={
             comments: props.comments,
             newComment: '',
-            likes: props.likes
+            likes: props.likes,
+            liked: false
         }
     }
 
@@ -34,9 +35,21 @@ class CommentSection extends Component{
         })
     }
 
-    like = () =>{
-        const newLikes = this.state.likes + 1;
-        this.setState({likes: newLikes})
+    like = e =>{
+
+        const likeButton = e.target;
+        console.log(likeButton);
+
+        if (!this.state.liked){
+            const newLikes = this.state.likes + 1;
+            this.setState({likes: newLikes, liked: true});
+            likeButton.style.color = 'red';
+        }
+        else{
+            const newLikes = this.state.likes - 1;
+            this.setState({likes: newLikes, liked: false});
+            likeButton.style.color = 'black';
+        }
     }
 
     render(){
