@@ -38,7 +38,7 @@ class CommentSection extends Component{
     like = e =>{
 
         const likeButton = e.target;
-        console.log(likeButton);
+        //console.log(likeButton);
 
         if (!this.state.liked){
             const newLikes = this.state.likes + 1;
@@ -61,7 +61,7 @@ class CommentSection extends Component{
                 ></i> <i className="far fa-comment"></i></div>
                 <div className="numOfLikes">{this.state.likes} likes</div>
                 {this.state.comments.map(x => (
-                    <div className="commentContent"><strong>{x.username}</strong> {x.text}</div>
+                    <div key={x.id} className="commentContent"><strong>{x.username}</strong> {x.text}</div>
                 ))}
                 <div className="date">{this.props.date}</div>
                 <form onSubmit={this.newComment}>

@@ -28,7 +28,7 @@ class App extends Component {
 
   submitSearch = e =>{
     e.preventDefault();
-    if(this.state.searchContent != ''){
+    if(this.state.searchContent !== ''){
       const searched = this.state.pageContent.filter(item => item.username.includes(this.state.searchContent));
       this.setState({pageContent: searched});
     }
