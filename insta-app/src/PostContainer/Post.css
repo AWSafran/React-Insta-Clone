@@ -1,0 +1,26 @@
+.postHeader{
+    display: flex;
+    height: 40px;
+    width: 77.5%;
+    margin: auto;
+    border: 1px solid #e6e6e6;
+    border-bottom: none;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.postHeader img{
+    border-radius: 50%;
+    height: 30px;
+    width: auto;
+}
+
+h2{
+    margin-left: 20px;
+    padding-top: 8px;
+    font-size: 1.6rem;
+}
+
+.mainImage{
+    width: 80%;
+}
