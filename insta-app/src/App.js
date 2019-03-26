@@ -10,9 +10,14 @@ class App extends Component {
     super();
 
     this.state = {
-      pageContent: dummyData
+      pageContent: []
     }
   }
+
+  componentDidMount(){
+    this.setState({pageContent: dummyData})
+  }
+
   render() {
     return (
       <div className="App">
