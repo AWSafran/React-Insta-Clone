@@ -1,0 +1,10 @@
+.logout{
+    margin: 20px auto;
+}
+
+.logout button{
+    background: none;
+    border: none;
+    text-align: center;
+    margin: auto;
+}
