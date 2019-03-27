@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import PostsPage from './PostsPage/PostsPage';
-
+import withAuthenticate from './Authentication/withAuthenticate';
 import dummyData from './Data/dummy-data';
 
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
 
 class App extends Component {
   constructor(){
@@ -39,8 +40,8 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <PostsPage
+    return(
+      <ComponentFromWithAuthenticate
         searchChange={this.searchChange}
         search={this.state.searchContent}
         searchSubmit={this.submitSearch}
