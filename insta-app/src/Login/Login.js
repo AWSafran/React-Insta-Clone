@@ -1,4 +1,5 @@
 import React from 'react';
+import './Login.css';
 
 class Login extends React.Component{
     constructor(){
@@ -20,8 +21,9 @@ class Login extends React.Component{
     }
 
     userLogin = e =>{
-        //e.preventDefault();
-        localStorage.setItem('user', {username: this.state.userTyped});
+       //e.preventDefault();
+        console.log(localStorage);
+        localStorage.setItem('user',  this.state.userTyped);
         this.setState({
             passTyped: '',
             userTyped: ''
@@ -30,23 +32,25 @@ class Login extends React.Component{
 
     render(){
         return(
-            <form className="loginForm"
-                onSubmit={this.userLogin}
-            >
-                <p>Username:</p>
-                <input 
-                    type="text"
-                    value={this.state.userTyped} 
-                    onChange={this.userChange}
-                />
-                <p>Password:</p>
-                <input 
-                    type="text"
-                    value={this.state.passTyped} 
-                    onChange={this.passChange} 
-                />
-                <button>Login</button>
-            </form>
+            <div className="loginContainer">
+                <form className="loginForm"
+                    onSubmit={this.userLogin}
+                >
+                    <p>Username:</p>
+                    <input 
+                        type="text"
+                        value={this.state.userTyped} 
+                        onChange={this.userChange}
+                    />
+                    <p>Password:</p>
+                    <input 
+                        type="password"
+                        value={this.state.passTyped} 
+                        onChange={this.passChange} 
+                    />
+                    <button>Login</button>
+                </form>
+            </div>
         );
     }
 }

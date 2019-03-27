@@ -22,10 +22,10 @@ class CommentSection extends Component{
 
     newComment = e =>{
         e.preventDefault();
-        console.log("submitted a comment");
+        console.log(localStorage.getItem('user'));
         const postedComment = {
             id: Date.now(),
-            username: 'you',
+            username: localStorage.getItem('user'),
             text: this.state.newComment
         }
 

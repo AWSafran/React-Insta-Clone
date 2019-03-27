@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from '../PostContainer/PostContainer';
+import './PostsPage.css';
 
 const PostsPage = props =>{
     return(
@@ -13,7 +14,7 @@ const PostsPage = props =>{
             <PostContainer posts={props.posts} />
             <form 
                 className="logout"
-                onSubmit={() => localStorage.clear()}
+                onSubmit={() => localStorage.removeItem('user')}
             >
                 <button>Log Out</button>
             </form>
