@@ -11,6 +11,12 @@ const PostsPage = props =>{
             searchSubmit={props.searchSubmit}
             />
             <PostContainer posts={props.posts} />
+            <form 
+                className="logout"
+                onSubmit={() => localStorage.clear()}
+            >
+                <button>Log Out</button>
+            </form>
         </div>
     );
 }

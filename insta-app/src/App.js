@@ -5,7 +5,7 @@ import withAuthenticate from './Authentication/withAuthenticate';
 import dummyData from './Data/dummy-data';
 import Login from './Login/Login';
 
-const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(Login);
 
 class App extends Component {
   constructor(){
@@ -43,7 +43,6 @@ class App extends Component {
   render() {
     return(
       <div>
-        <Login />
         <ComponentFromWithAuthenticate
           searchChange={this.searchChange}
           search={this.state.searchContent}

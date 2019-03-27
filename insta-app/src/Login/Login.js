@@ -20,7 +20,7 @@ class Login extends React.Component{
     }
 
     userLogin = e =>{
-        e.preventDefault();
+        //e.preventDefault();
         localStorage.setItem('user', {username: this.state.userTyped});
         this.setState({
             passTyped: '',
