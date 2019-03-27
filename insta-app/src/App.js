@@ -3,6 +3,7 @@ import './App.css';
 import PostsPage from './PostsPage/PostsPage';
 import withAuthenticate from './Authentication/withAuthenticate';
 import dummyData from './Data/dummy-data';
+import Login from './Login/Login';
 
 const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
 
@@ -41,12 +42,15 @@ class App extends Component {
 
   render() {
     return(
-      <ComponentFromWithAuthenticate
-        searchChange={this.searchChange}
-        search={this.state.searchContent}
-        searchSubmit={this.submitSearch}
-        posts={this.state.pageContent}
-      />
+      <div>
+        <Login />
+        <ComponentFromWithAuthenticate
+          searchChange={this.searchChange}
+          search={this.state.searchContent}
+          searchSubmit={this.submitSearch}
+          posts={this.state.pageContent}
+        />
+      </div>
     );
   }
 }
