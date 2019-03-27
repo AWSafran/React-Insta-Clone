@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import PostsPage from './PostsPage/PostsPage';
 
 import dummyData from './Data/dummy-data';
-import SearchBar from './SearchBar/SearchBar';
-import PostContainer from './PostContainer/PostContainer';
+
 
 class App extends Component {
   constructor(){
@@ -40,14 +40,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <SearchBar 
-          searchChange={this.searchChange}
-          search={this.state.searchContent}
-          searchSubmit={this.submitSearch}
-        />
-        <PostContainer posts={this.state.pageContent} />
-      </div>
+      <PostsPage
+        searchChange={this.searchChange}
+        search={this.state.searchContent}
+        searchSubmit={this.submitSearch}
+        posts={this.state.pageContent}
+      />
     );
   }
 }
