@@ -3,7 +3,29 @@ import './Login.css';
 
 import styled, {css} from 'styled-components';
 
+const LoginForm = styled.form`
+    margin: 200px auto;
+    text-align: center;
+`;
 
+const InputTitle = styled.p`
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+`;
+
+const LoginInput = styled.input`
+    margin-bottom: 10px;
+    height: 30px;
+    text-align: center;
+`;
+
+const LoginButton = styled.button`
+    border: none;
+    background: none;
+    border-radius: 2px;
+    width: 70%;
+    height: 40px;
+`;
 
 class Login extends React.Component{
     constructor(){
@@ -37,23 +59,23 @@ class Login extends React.Component{
     render(){
         return(
             <div className="loginContainer">
-                <form className="loginForm"
+                <LoginForm
                     onSubmit={this.userLogin}
                 >
-                    <p>Username:</p>
-                    <input 
+                    <InputTitle>Username:</InputTitle>
+                    <LoginInput 
                         type="text"
                         value={this.state.userTyped} 
                         onChange={this.userChange}
                     />
-                    <p>Password:</p>
-                    <input 
+                    <InputTitle>Password:</InputTitle>
+                    <LoginInput 
                         type="password"
                         value={this.state.passTyped} 
                         onChange={this.passChange} 
                     />
-                    <button>Login</button>
-                </form>
+                    <LoginButton>Login</LoginButton>
+                </LoginForm>
             </div>
         );
     }
