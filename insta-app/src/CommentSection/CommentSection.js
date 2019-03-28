@@ -1,6 +1,45 @@
 import React, { Component } from 'react';
 import './CommentSection.css'
 
+import styled, {css} from 'styled-components';
+
+const CommentContainer = styled.div`
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    border-top: none;
+    padding: 10px;
+    width:77.5%;
+    margin: 0 auto 20px;
+    text-align: left;
+    line-height: 24px;
+    font-size: 2.4rem;
+`;
+
+const Strong = styled.strong`
+    font-size: 1.8rem;
+`;
+
+const Symbols = styled.div`
+    text-align: left;
+    font-size: 3rem; 
+`;
+
+const NumOfLikes = styled.div`
+    text-align: left;
+`;
+
+const Input = styled.input`
+    width: 95%;
+    border: 1px solid #e6e6e6;
+    height: 20px;
+    border-radius: 2px;
+`;
+
+const CommentDate = styled.div`
+    color: silver;
+    font-size: 1.2rem;
+`;
+
 class CommentSection extends Component{
     constructor(props){
         super(props);
@@ -54,24 +93,24 @@ class CommentSection extends Component{
 
     render(){
         return (
-            <div className="commentSection">
-                <div className="symbols"><i 
+            <CommentContainer>
+                <Symbols><i 
                     className="far fa-heart"
                     onClick={this.like}
-                ></i> <i className="far fa-comment"></i></div>
-                <div className="numOfLikes">{this.state.likes} likes</div>
+                ></i> <i className="far fa-comment"></i></Symbols>
+                <NumOfLikes>{this.state.likes} likes</NumOfLikes>
                 {this.state.comments.map(x => (
-                    <div key={x.id} className="commentContent"><strong>{x.username}</strong> {x.text}</div>
+                    <div key={x.id} className="commentContent"><Strong>{x.username}</Strong> {x.text}</div>
                 ))}
-                <div className="date">{this.props.date}</div>
+                <CommentDate>{this.props.date}</CommentDate>
                 <form onSubmit={this.newComment}>
-                    <input 
+                    <Input 
                         type="text"
                         onChange={this.commentChange}
                         value={this.state.newComment}
                     />
                 </form>
-            </div>
+            </CommentContainer>
         );
     }
 }

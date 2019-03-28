@@ -1,4 +1,4 @@
-.commentSection{
+/* .commentSection{
     border: 1px solid #e6e6e6;
     border-radius: 2px;
     border-top: none;
@@ -8,36 +8,36 @@
     text-align: left;
     line-height: 24px;
     font-size: 2.4rem;
-}
+} */
 
-strong{
+/* strong{
     font-size: 1.8rem;
-}
+} */
 
-.symbols{
+/* .symbols{
     text-align: left;
     font-size: 3rem;
-}
+} */
 
-.numOfLikes{
+/* .numOfLikes{
     text-align: left;
-}
+} */
 
 i{
     width: 5%
 }
 
-.commentSection input{
+/* .commentSection input{
     width: 95%;
-}
+} */
 
 .commentSection .date{
     color: silver;
     font-size: 1.2rem;
 }
 
-input{
+/* input{
     border: 1px solid #e6e6e6;
     height: 20px;
     border-radius: 2px;
-}
+} */
