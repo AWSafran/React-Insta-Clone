@@ -4,6 +4,7 @@ import './Login.css';
 import styled, {css} from 'styled-components';
 
 const LoginForm = styled.form`
+    width: 30%;
     margin: 200px auto;
     text-align: center;
 `;

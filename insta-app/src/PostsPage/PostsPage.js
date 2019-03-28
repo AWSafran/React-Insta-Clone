@@ -3,6 +3,19 @@ import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from '../PostContainer/PostContainer';
 import './PostsPage.css';
 
+import styled, {css} from 'styled-components';
+
+const LogoutContainer = styled.form`
+    margin: 20px auto;
+`;
+
+const LogoutButton = styled.button`
+    background: none;
+    border: none;
+    text-align: center;
+    margin: auto;
+`;
+
 const PostsPage = props =>{
     return(
         <div className="App">
@@ -12,12 +25,12 @@ const PostsPage = props =>{
             searchSubmit={props.searchSubmit}
             />
             <PostContainer posts={props.posts} />
-            <form 
+            <LogoutContainer 
                 className="logout"
                 onSubmit={() => localStorage.removeItem('user')}
             >
-                <button>Log Out</button>
-            </form>
+                <LogoutButton>Log Out</LogoutButton>
+            </LogoutContainer>
         </div>
     );
 }
